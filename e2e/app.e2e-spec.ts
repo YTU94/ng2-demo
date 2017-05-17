@@ -1,10 +1,10 @@
-import { NgFormsPage } from './app.po';
+import { CouldbooksPage } from './app.po';
 
-describe('ng-forms App', () => {
-  let page: NgFormsPage;
+describe('couldbooks App', () => {
+  let page: CouldbooksPage;
 
   beforeEach(() => {
-    page = new NgFormsPage();
+    page = new CouldbooksPage();
   });
 
   it('should display message saying app works', () => {

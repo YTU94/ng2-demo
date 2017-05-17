@@ -1,3 +1,47 @@
-<h1>
-  {{title}}
-</h1>
+<div class="navbar main-nav navbar-fixed-up" role="navigation" style="background:#6f5499;" [@flyIn]="'active'">
+	<div class="container">
+		<div class="navber-header">
+			<a href="" class="navbar-brand navbar-brand-my color-fff">CouldBooks</a>
+		</div>
+		<div class="">
+			<ul class="nav navbar-nav">
+				<li class=""><a routerLink="home" class="color-fff">Home</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="dropdown-toggle color-fff"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    个人中心
+					    <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">忘记密码</a></li>
+					    <li><a href="#">修改密码</a></li>
+					    <li role="separator" class="divider"></li>
+					    <li><a href="#">我的书签</a></li>
+					    <li><a href="#">我的分类</a></li>
+					    <li><a routerLink="add">添加书签</a></li>
+					    <router-outlet></router-outlet>
+					 </ul>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right" [@flyIn]="'active'">
+				<li class="" routerLinkActive="active"><a routerLink="login" class="color-fff">Login</a></li>
+				<li class="" routerLinkActive="active"><a routerLink="register" class="color-fff">Register</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 主题内容区域 -->
+<div class="container main-container">
+	<router-outlet></router-outlet>
+</div>
+<!-- 底部区域 -->
+<div class="footer bs-footer">
+    <div class="container">
+        <div class="row">
+            <p>
+                Powered by <a href="" target="_blank">couldbook</a>
+            </p>
+        </div>
+    </div>
+</div>

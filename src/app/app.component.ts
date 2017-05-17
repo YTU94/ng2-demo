@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
+import { flyIn } from './animations/fly-in'; 
 @Component({
-  selector: 'my-app',
-  template: '<hero-form></hero-form>'
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  animations: [
+  	flyIn
+  ]
 })
-
-export class AppComponent { }
+export class AppComponent {
+}

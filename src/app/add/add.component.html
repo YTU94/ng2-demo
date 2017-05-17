@@ -1,0 +1,41 @@
+<div class="container" [@flyIn]="'active'">
+    <h1 class="text-center">Could Book</h1>
+    <form class="col-md-4 col-md-offset-4" #userForm="ngForm" (ngSubmit)="onSubmit()">
+      	<div class="form-group">
+	        <label for="name">介绍</label>
+	        <input type="text" class="form-control" id="name" placeholder="请输入介绍" 
+		       	required
+		        name = "name"
+		        [(ngModel)]="modleName" name="name"
+			 	#spy="ngModel">
+		    <div [hidden]="spy.valid || spy.pristine" class="alert alert-danger">
+	          	Name is required
+	        </div>
+      	</div>
+      	<div class="form-group">
+	        <label for="name">URL地址</label>
+	        <input type="text" class="form-control" id="name" placeholder="请输入介绍" 
+		       	required
+		        name = "name"
+		        [(ngModel)]="modleName" name="name"
+			 	#spy="ngModel">
+		    <div [hidden]="spy.valid || spy.pristine" class="alert alert-danger">
+	          	Name is required
+	        </div>
+      	</div>  
+      	<div class="form-group">
+	        <label for="name">类别</label>
+	        <select id="classify" class="form-control"
+	        	required
+	        	[(ngModel)]="classify"
+	        	name="classify"
+	        	#spy="ngModel">
+	        	<option  [value]="classify">{{classify}}</option>		
+	        </select>
+		    <div [hidden]="spy.valid || spy.pristine" class="alert alert-danger">
+	          	Name is required
+	        </div>
+      	</div>      	    	
+	      <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">提交</button>
+    </form>
+</div>
