@@ -406,3 +406,63 @@ Content-Type :application/json
 
 }
 ```
+#### 1.证书查询接口
+
+```properties
+url: host/billingsystem/service/bs/cert
+method:POST
+Content-Type :application/json
+```
+
+**request**
+
+```json
+{
+	"ids":[
+		30,31
+	]
+}
+
+```
+
+**response**
+
+```json
+{
+    "success": true,
+    "msg": null,
+    "errCode": 0,
+    "data": {
+        "30": [
+            {
+                "name": "证书名称",
+                "value": "long"
+            },
+            {
+                "name": "证书颁发者",
+                "value": "ZJCA"
+            },
+            {
+                "name": "证书序列号",
+                "value": "74c4008a0001d555"
+            }
+        ],
+        "31": [
+            {
+                "name": "证书名称",
+                "value": "单证书 RSA 普通证书"
+            },
+            {
+                "name": "证书颁发者",
+                "value": "ZJCA"
+            },
+            {
+                "name": "证书序列号",
+                "value": "74c4006c0001d57d"
+            }
+        ]
+    }
+
+}
+```
+
