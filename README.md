@@ -409,20 +409,14 @@ Content-Type :application/json
 #### 1.证书查询接口
 
 ```properties
-url: host/billingsystem/service/bs/cert
-method:POST
-Content-Type :application/json
+url: host/billingsystem/service/bs/cert?bizId=609
+method:GET
 ```
 
 **request**
 
 ```json
-{
-	"ids":[
-		30,31
-	]
-}
-
+bizId (业务id)
 ```
 
 **response**
@@ -433,36 +427,36 @@ Content-Type :application/json
     "msg": null,
     "errCode": 0,
     "data": {
-        "30": [
+        "609": [
             {
                 "name": "证书名称",
-                "value": "long"
+                "value": "压测0009"
             },
             {
                 "name": "证书颁发者",
-                "value": "ZJCA"
+                "value": "CFCA ACS OCA31"
             },
             {
                 "name": "证书序列号",
-                "value": "74c4008a0001d555"
-            }
-        ],
-        "31": [
-            {
-                "name": "证书名称",
-                "value": "单证书 RSA 普通证书"
+                "value": "4010740369"
             },
             {
-                "name": "证书颁发者",
-                "value": "ZJCA"
+                "name": "证件类型",
+                "value": "身份证"
             },
             {
-                "name": "证书序列号",
-                "value": "74c4006c0001d57d"
+                "name": "证件号码",
+                "value": "150203199302083221"
+            },
+            {
+                "name": "证书类型",
+                "value": "云证书"
+            },
+            {
+                "name": "证书有效期",
+                "value": "两年"
             }
         ]
     }
-
 }
 ```
-
